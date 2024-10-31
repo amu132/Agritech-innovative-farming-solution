@@ -1,1 +1,0 @@
-# Agritech-innovative-farming-solution
