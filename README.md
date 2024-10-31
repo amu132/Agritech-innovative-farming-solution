@@ -1,4 +1,5 @@
 Agriculture Portal
+
 Agriculture Portal is a machine learning-based project designed to provide predictions and recommendations for farmers. The system utilizes various algorithms to predict crops, recommend fertilizers, and provide rainfall and yield predictions, enabling farmers to make informed decisions about their crops.
 
 Additionally, the portal supports direct crop sales to customers with a real payment interface using the Stripe API. Other supporting features include a chatbot powered by OpenAI's GPT-3.5-turbo model, weather forecasts for up to four days using the Weather API, and agriculture-related news using the News API.
