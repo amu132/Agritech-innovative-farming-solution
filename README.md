@@ -14,6 +14,8 @@ Agriculture News: Stay updated with the latest news in agriculture.
 Chatbot: Interactive chatbot using OpenAI's GPT-3.5-turbo model.
 Weather Forecast: Get weather forecasts for up to four days.
 Payment Interface: Direct crop sales with a real-time payment interface using Stripe API.
+
+
 Technologies Used
 Python
 PHP
@@ -56,46 +58,7 @@ function smtp_mailer($to, $subject, $msg) {
     return $mail->Send() ? 1 : 0;
 }
 Installation
-Clone the repository to your local machine:
 
-bash
-Copy code
-git clone https://github.com/vaishnavid0604/agriculture-portal.git
-Navigate to the Farmers folder and install the required packages using pip:
-
-bash
-Copy code
-pip install -r requirements.txt
-Update Success URL and Cancel URL in customer/cbuy_crops.php:
-
-php
-Copy code
-$session = \Stripe\Checkout\Session::create([
-    'payment_method_types' => ['card'],
-    'line_items' => [[
-        'price_data' => [
-            'product' => 'prod_NdAYaoDLX3DnMY',
-            'unit_amount' => $TotalCartPrice,
-            'currency' => 'inr',
-        ],
-        'quantity' => 1,
-    ]],
-    'mode' => 'payment',
-    'success_url' => 'http://localhost/projects/agri2/customer/cupdatedb.php', // Change File Path
-    'cancel_url' => 'http://localhost/projects/agri2/customer/cbuy_crops.php', // Change File Path
-]);
-Add your API keys to the respective files:
-
-News API Key: fnewsfeed.php
-OpenWeatherMap API Key: fweather_forecast.php
-Stripe API Key: customer/stripePayment/config.php
-OpenAI API Key: index.php and fchatgpt.php
-Import the database from the db folder.
-
-Run the Apache web server using XAMPP.
-
-Dataset
-The Crop Management System dataset includes the following features:
 
 Crop Prediction Dataset
 
